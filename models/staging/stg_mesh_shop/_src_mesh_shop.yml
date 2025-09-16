@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: mesh_shop
+    database: dbt-practice-bigquery-setup
+    schema: mesh_shop
+    tables:
+      - name: customers
+      - name: items
+      - name: orders
+      - name: products
+      - name: stores
+      - name: supplies
+

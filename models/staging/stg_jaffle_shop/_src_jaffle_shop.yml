@@ -7,6 +7,7 @@ sources:
     description: A clone of a Postgres application database.
     tables:
       - name: customers
+        description: Raw customer data.
         columns:
           - name: id
             description: primary key
@@ -15,6 +16,7 @@ sources:
               - not_null
               
       - name: orders
+        description: Raw orders data.
         config:
           freshness:
             warn_after:

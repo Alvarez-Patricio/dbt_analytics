@@ -26,3 +26,21 @@ sources:
               count: 4
               period: day
           loaded_at_field: _etl_loaded_at
+
+      - name: customers_refactor
+        description: model for practicing refactoring models
+        columns:
+          - name: customer_id
+            description: primary_key
+            data_tests:
+              - unique
+              - not_null
+              
+      - name: order_id
+        description: second model for practicing refactoring models
+        columns:
+          - name: customer_id
+            description: primary_key
+            data_tests:
+              - unique
+              - not_null

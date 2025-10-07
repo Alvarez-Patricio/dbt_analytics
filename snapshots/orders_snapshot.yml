@@ -1,0 +1,12 @@
+snapshots:
+  - name: order_snapshot
+    description: snapshot of source jaffle_shop.orders
+    relation: source('jaffle_shop','orders')
+    config: 
+      database: dbt-practice-bigquery-setup
+      schema: snapshots
+      unique_key: id
+      hard_deletes: ignore
+      strategy: check
+      check_cols: ['id', 'user_id', 'order_date', 'status']
+      
